@@ -3,7 +3,7 @@
 require 'validation.php';
 
 if ($_POST) {
-    $rules = [
+    $form_rules = [
         'test' => [
             'is_required' => null,
             'is_number' => null,
@@ -11,7 +11,7 @@ if ($_POST) {
         ]
     ];
 
-    $errors = validate($_POST, $rules);
+    $errors = validate($_POST, $form_rules);
 }
 
 ?><!doctype html>

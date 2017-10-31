@@ -1,17 +1,18 @@
 <?php
 
-function validate($data, $form_rules)
+function validate($post, $form_rules)
 {
     $errors = [];
 
     foreach ($form_rules as $field => $field_rules) {
-        if (isset($data[$field])) {
-            $field_value = $data[$field];
-            foreach ($field_rules as $rule_name => $rule_value) {
-                if (is_null($rule_value)) {
+        if (isset($post[$field])) {
+            $field_value = $post[$field];
+
+            foreach ($field_rules as $rule_name => $rule_param) {
+                if (is_null($rule_param)) {
                     $errors[$field][] = $rule_name($field_value);
                 } else {
-                    $errors[$field][] = $rule_name($field_value, $rule_value);
+                    $errors[$field][] = $rule_name($field_value, $rule_param);
                 }
             }
         } else {

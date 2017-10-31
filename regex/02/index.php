@@ -7,8 +7,8 @@
 <div style="margin: 10px 0; padding: 1px 10px; background: #ddd;">
     <?php
 
-    $regex = "/^[a-zA-z0-9]{1,}$/";
-//    $regex = "/^[a-zA-z0-9]+$/";
+    $regex = "/^[a-zA-Z0-9]{1,}$/";
+//    $regex = "/^[a-zA-Z0-9]+$/";
 //    $regex = "/^[a-z0-9]+$/i";
 //    $regex = "/^[a-z\d]+$/i";
 
