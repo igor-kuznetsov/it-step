@@ -3,38 +3,23 @@
 abstract class Vehicle
 {
     public $color;
-    protected $type;
-    private $cargo;
 
-    public function getCargo()
+    public function move()
     {
-        return $this->cargo;
-    }
-
-    protected function setCargo()
-    {
-        $this->setDefaultCargo();
-    }
-
-    private function setDefaultCargo()
-    {
-        $this->cargo = 'iphone';
+        echo 'moving';
     }
 }
 
 class Truck extends Vehicle
 {
-    public function loadCargo()
+    public function load()
     {
-        $this->setCargo();
+        echo 'loading cargo';
     }
 }
 
 $truck = new Truck();
 $truck->color = 'red';
-$truck->loadCargo();
-echo $truck->getCargo();
-
+$truck->move();
 echo '<hr>';
-
 $car = new Vehicle(); // Error

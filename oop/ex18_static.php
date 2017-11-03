@@ -2,12 +2,13 @@
 
 class TestStatic
 {
-    public static $x;
+    public static $color;
     public $y;
 
-    public function getX()
+    public function getColor()
     {
-        return self::$x;
+        //return TestStatic::$color;
+        echo self::$color;
     }
 
     public static function echoText()
@@ -15,18 +16,18 @@ class TestStatic
         echo 'Text';
     }
 
-    public static function wrongStaticCallToThis()
-    {
-        echo $this->y; // Error
-    }
+//    public static function wrongStaticCallToThis()
+//    {
+//        echo $this->y; // Error
+//    }
 }
 
-TestStatic::$x = 100;
-echo TestStatic::$x;
+TestStatic::$color = 'green';
+echo TestStatic::$color;
 
 echo '<hr>';
 
-TestStatic::echoText();
+TestStatic::echoText(); // Text
 
 echo '<hr>';
 

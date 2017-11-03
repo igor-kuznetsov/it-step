@@ -14,6 +14,8 @@ class AuthorWithVisibility
 
     public function getEmail()
     {
+        $this->echoText();
+
         return $this->email;
     }
 
@@ -24,7 +26,7 @@ class AuthorWithVisibility
 }
 
 $author = new AuthorWithVisibility();
-
+$author->name = 'Vasya';
 //$author->email = 'vasya@gmail.com'; // Error
 $author->setEmail('vasya@gmail.com');
 $author->setEmail('itisnotemailaddress.com');

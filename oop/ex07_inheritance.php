@@ -4,6 +4,7 @@ class WebsiteUser
 {
     public $login;
     protected $password = '1qaz2wsx';
+    private $test;
 
     public function login()
     {

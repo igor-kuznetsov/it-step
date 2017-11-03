@@ -3,6 +3,7 @@
 abstract class AbstractBase
 {
     abstract public function base();
+    abstract public function base2();
 }
 
 abstract class AbstractChild extends AbstractBase
@@ -16,6 +17,8 @@ class ConcreteChild extends AbstractChild
     {
         echo 'base';
     }
+
+    public function base2() {}
 
     public function child()
     {

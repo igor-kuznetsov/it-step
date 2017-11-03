@@ -3,6 +3,7 @@
 interface EmailInterface
 {
     public function sendEmail();
+    public function test();
 }
 
 interface PhoneInterface
@@ -21,6 +22,8 @@ class Operator implements EmailInterface, PhoneInterface
     {
         echo 'phone';
     }
+
+    public function test() {}
 }
 
 $op = new Operator();
