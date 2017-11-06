@@ -1,0 +1,3 @@
+CREATE DATABASE `my_db1`;
+
+CREATE DATABASE `my_db2` CHARACTER SET utf8 COLLATE utf8_general_ci;

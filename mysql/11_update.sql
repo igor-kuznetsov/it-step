@@ -1,0 +1,1 @@
+UPDATE `products` SET `name` = 'New Product Name' WHERE `name` = 'Motorola';
