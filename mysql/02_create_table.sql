@@ -3,7 +3,7 @@ CREATE TABLE `products` (
   `name` VARCHAR(255),
   `description` TEXT NULL,
   `price` DECIMAL(10, 2) UNSIGNED,
-  `category` INT UNSIGNED,
+  `category_id` INT UNSIGNED,
   PRIMARY KEY (`id`)
 );
 
