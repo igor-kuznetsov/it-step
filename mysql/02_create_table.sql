@@ -1,6 +1,6 @@
 CREATE TABLE `products` (
   `id` INT UNSIGNED AUTO_INCREMENT,
-  `name` VARCHAR(255),
+  `name` VARCHAR(255) DEFAULT 'Vasya',
   `description` TEXT NULL,
   `price` DECIMAL(10, 2) UNSIGNED,
   `category_id` INT UNSIGNED,
