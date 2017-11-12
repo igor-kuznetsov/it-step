@@ -1,5 +1,20 @@
 <?php
 
+function test_recursion($a)
+{
+    echo $a;
+
+    $a--;
+
+    if ($a > 0) {
+        test_recursion($a);
+    }
+}
+
+test_recursion(9);
+
+echo '<hr>';
+
 function count_r($array, $count = 0)
 {
     foreach ($array as $value) {
