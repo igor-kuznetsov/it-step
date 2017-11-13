@@ -1,4 +1,4 @@
 .idea/
 /dz/*
 /test/*
-/mysqli/config.local.php
+/08_mysqli/config.local.php

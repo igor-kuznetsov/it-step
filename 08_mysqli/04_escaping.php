@@ -20,20 +20,26 @@ require_once 'config.php';
         }
 
         $name = $mysqli->real_escape_string($_POST['name']);
+        //$name = $_POST['name'];
 
-        $res = $mysqli->query("SELECT * FROM `products` WHERE `name` = '$name';");
+        $sql = "SELECT * FROM `products` WHERE `name` = '$name';";
+        //var_dump($sql);
+
+        $res = $mysqli->query($sql);
 
         if ($mysqli->errno) {
             die("DB error: " . $mysqli->error);
         }
 
-        $data = [];
-        while ($row = $result->fetch_assoc()) {
-            $data[] = $row;
-        }
+        if (!is_bool($res)) {
+            $data = [];
+            while ($row = $res->fetch_assoc()) {
+                $data[] = $row;
+            }
 
-        echo "<pre>";
-        print_r($data);
+            echo "<pre>";
+            print_r($data);
+        }
     }
 
     ?>
