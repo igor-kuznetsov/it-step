@@ -14,4 +14,4 @@ ALTER TABLE `products`
 FOREIGN KEY (`category_id`)
 REFERENCES `categories`(`id`)
   ON DELETE CASCADE
-  ON UPDATE CASCADE;
+  ON UPDATE NO ACTION;
