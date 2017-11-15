@@ -22,6 +22,7 @@ switch ($b) {
         echo '$b = 1';
         break;
     case 3:
+    case 4:
         echo '$b = 3';
         break;
     case 5:
