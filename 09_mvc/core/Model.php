@@ -2,7 +2,7 @@
 
 namespace core;
 
-class Model
+abstract class Model
 {
     protected $db;
 
