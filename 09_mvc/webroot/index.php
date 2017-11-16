@@ -4,8 +4,6 @@ use core\App as App;
 
 define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(dirname(__FILE__)));
-define('MODELS_NS', 'models');
-define('CONTROLLERS_NS', 'controllers');
 
 spl_autoload_register(function ($className) {
     $classPath = ROOT . DS . str_replace('\\', DS, ltrim($className, '\\')) . '.php';
