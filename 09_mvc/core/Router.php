@@ -31,7 +31,11 @@ class Router
                 array_shift($pathParts);
             }
 
-            $this->params = $pathParts;
+            while (count($pathParts)) {
+                $paramName = array_shift($pathParts);
+                $paramValue = array_shift($pathParts);
+                $this->params[$paramName] = $paramValue;
+            }
         }
     }
 

@@ -20,7 +20,7 @@ class ProductsController extends Controller
 
     public function product()
     {
-        $id = empty($this->params[0]) ? 0 : (int) $this->params[0];
+        $id = empty($this->params['id']) ? 0 : (int) $this->params['id'];
         $this->data['product'] = $this->model->getById($id);
     }
 }

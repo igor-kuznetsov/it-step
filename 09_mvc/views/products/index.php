@@ -2,7 +2,7 @@
     <ul>
         <?php foreach ($data['products'] as $product) : ?>
             <h3>
-                <a href="/products/product/<?php echo $product['id']; ?>">
+                <a href="/products/product/id/<?php echo $product['id']; ?>">
                     <?php echo $product['name']; ?>
                 </a>
             </h3>
