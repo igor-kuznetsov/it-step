@@ -15,7 +15,8 @@ class ProductsController extends Controller
 
     public function index()
     {
-        $this->data['products'] = $this->model->getList();
+        $category = empty($this->params['category']) ? 0 : (int) $this->params['category'];
+        $this->data['products'] = $this->model->getListByCategory($category);
     }
 
     public function product()
