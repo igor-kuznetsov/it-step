@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <title>Form</title>
+</head>
+<body>
+<form method="post" action="form.php">
+    <input name="user_name" placeholder="Name">
+    <br>
+    <br>
+    <input name="user_email" value="someone@mail.com" disabled>
+    <br>
+    <br>
+    <textarea name="user_comment" placeholder="Comment"></textarea>
+    <br>
+    <br>
+    <select name="user_role">
+        <option value="">- Please Select Role -</option>
+        <option value="director">Director</option>
+        <option value="manager">Manager</option>
+        <option value="client">Client</option>
+    </select>
+    <br>
+    <br>
+    <label for="user_gender_male">Male</label>
+    <input type="radio" name="user_gender" value="male" id="user_gender_male">
+    <label for="user_gender_female">Female</label>
+    <input type="radio" name="user_gender" value="female" id="user_gender_female">
+    <br>
+    <br>
+    <input type="checkbox" name="user_newsletter" id="user_newsletter">
+    <label for="user_newsletter">Sign up for newsletter</label>
+    <br>
+    <br>
+    <input type="submit">
+</form>
+</body>
+</html>
