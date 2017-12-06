@@ -22,7 +22,7 @@ if ($_POST) {
         echo '<p style="color:red">Phone: Only digits, spaces and hyphens are allowed!</p>';
     }
 
-    $url_regex = "/^https?:\/\/[a-z\d\.-]+\.[a-z\.]{2,6}([\/\s\.\w-]*)*\/?$/i";
+    $url_regex = "/^https?:\/\/[a-z\d\.-]+\.[a-z\.]{2,6}[\/\.\w-]*\/?$/i";
     if (preg_match($url_regex, $_POST['website'])) {
         echo '<p style="color:green">Website: OK</p>';
     } else {
