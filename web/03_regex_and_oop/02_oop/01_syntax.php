@@ -2,9 +2,23 @@
 
 namespace web\oop;
 
+use Exception;
+
 class DataBase
 {
+    public function __construct($host, $user, $pass, $name)
+    {
+        if (!$this->connect($host, $user, $pass, $name)) {
+            throw new Exception('DB connection error');
+        }
+    }
+
     public function checkUser($login, $password)
+    {
+        return true;
+    }
+
+    private function connect($host, $user, $pass, $name)
     {
         return true;
     }
@@ -22,7 +36,12 @@ class User
     {
         $this->login = $login;
         $this->password = $password;
-        $this->db = new DataBase();
+
+        try {
+            $this->db = new DataBase('localhost', 'root', '', 'test');
+        } catch (Exception $exc) {
+            die($exc->getMessage());
+        }
     }
 
     public function getFullName()
