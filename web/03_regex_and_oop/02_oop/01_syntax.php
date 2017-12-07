@@ -4,7 +4,7 @@ namespace web\oop;
 
 use Exception;
 
-class DataBase
+final class DataBase
 {
     public function __construct($host, $user, $pass, $name)
     {
@@ -44,7 +44,7 @@ class User
         }
     }
 
-    public function getFullName()
+    final public function getFullName()
     {
         return implode(' ', array_filter([
             $this->firstName,

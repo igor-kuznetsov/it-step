@@ -28,7 +28,9 @@ class TestPhpOverloading
 
     public function __unset($name)
     {
-        unset($this->data[$name]);
+        if (array_key_exists($name, $this->data)) {
+            unset($this->data[$name]);
+        }
     }
 
     public function __call($name, $arguments)
