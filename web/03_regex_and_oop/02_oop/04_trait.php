@@ -62,12 +62,12 @@ $child->printExclamation();
 
 trait ChatA
 {
-    public function smallTalk()
+    public function shortMessage()
     {
         echo 'a';
     }
 
-    public function bigTalk()
+    public function longMessage()
     {
         echo 'A';
     }
@@ -75,12 +75,12 @@ trait ChatA
 
 trait ChatB
 {
-    public function smallTalk()
+    public function shortMessage()
     {
         echo 'b';
     }
 
-    public function bigTalk()
+    public function longMessage()
     {
         echo 'B';
     }
@@ -89,13 +89,13 @@ trait ChatB
 class ChatUser
 {
     use ChatA, ChatB {
-        ChatB::smallTalk insteadof ChatA; // b
-        ChatA::bigTalk insteadof ChatB; // A
-        ChatB::bigTalk as bigTalkB; // B
+        ChatB::shortMessage insteadof ChatA;
+        ChatA::longMessage insteadof ChatB;
+        ChatB::longMessage as longMessageB;
     }
 }
 
 $obj = new ChatUser();
-$obj->smallTalk();
-$obj->bigTalk();
-$obj->bigTalkB();
+$obj->shortMessage(); // b
+$obj->longMessage(); // A
+$obj->longMessageB(); // B
