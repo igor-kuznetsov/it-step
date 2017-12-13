@@ -13,6 +13,8 @@ echo '<hr>';
 chdir('../03_oop');
 echo getcwd();
 
+echo '<hr>';
+
 chdir('..');
 $h = opendir('04_filesystem');
 
@@ -23,22 +25,26 @@ while ($dir = readdir($h)) {
 }
 
 closedir($h);
-die;
 
-
-
-//chdir('aaaaa');
-//mkdir('aaaaa');
-
-//rmdir('aaaaa/aaaaa');
-//rmdir('aaaaa');
-
-chdir('..');
-$scan = scandir('dirs', SCANDIR_SORT_NONE);
-$result = array_values(array_diff($scan, ['.', '..']));
-var_dump($result);
 echo '<hr>';
 
-chdir('dirs');
-$res = glob('*.txt');
-var_dump($res);
+chdir('04_filesystem');
+if (!file_exists('aaaaa') || !is_dir('aaaaa')) {
+    mkdir('aaaaa');
+}
+rmdir('aaaaa');
+
+echo '<hr>';
+
+chdir('..');
+$scan = scandir('04_filesystem', SCANDIR_SORT_NONE);
+$filtered_scan = array_diff($scan, ['.', '..']);
+$result = array_values($filtered_scan);
+var_dump($result);
+
+echo '<hr>';
+
+chdir('04_filesystem');
+$res = glob('*.php');
+echo "<pre>";
+print_r($res);
