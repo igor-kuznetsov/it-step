@@ -1,1 +1,1 @@
-<img src="button.php" alt="">
+<img src="button.php" alt="PNG image">
