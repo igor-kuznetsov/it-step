@@ -1,1 +1,1 @@
-<img src="watermark.php" alt="watermark">
+<img src="includes/watermark.php" alt="watermark">

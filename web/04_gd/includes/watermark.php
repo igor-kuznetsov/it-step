@@ -1,6 +1,6 @@
 <?php
 
-$img = imagecreatefromjpeg('img/photo.jpeg');
+$img = imagecreatefromjpeg('../img/photo.jpeg');
 
 $watermark = imagecreatetruecolor(80, 50);
 $white = imagecolorallocate($img, 255, 255, 255);
