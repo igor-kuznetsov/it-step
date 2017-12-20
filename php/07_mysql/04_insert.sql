@@ -1,4 +1,4 @@
-INSERT INTO `products` VALUES (NULL, 'iPhone7', NULL, 555.55, 1);
+INSERT INTO `my_db2`.`products` VALUES (NULL, 'iPhone7', NULL, 555.55, 1);
 
 INSERT INTO `products` (`name`, `price`, `category_id`)
 VALUES ('Nokia', 5.55, 2);

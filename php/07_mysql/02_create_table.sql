@@ -1,4 +1,4 @@
-CREATE TABLE `products` (
+CREATE TABLE `my_db2`.`products` (
   `id` INT UNSIGNED AUTO_INCREMENT,
   `name` VARCHAR(255) DEFAULT 'Vasya',
   `description` TEXT NULL,
