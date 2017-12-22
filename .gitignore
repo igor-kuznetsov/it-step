@@ -2,3 +2,4 @@
 /hw/*
 /php/08_mysqli/config.local.php
 /web/04_filesystem/upload/*
+/web/05_wordpress/wp-config.php
