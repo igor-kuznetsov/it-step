@@ -10,7 +10,7 @@ if ($mysqli->connect_errno) {
 
 $sql = "SELECT * FROM `products`;";
 
-$result = $mysqli->query($sql);
+$result = $mysqli->query($sql); // mysql_result object
 
 if ($mysqli->errno) {
     die("DB error: " . $mysqli->error);
@@ -19,8 +19,6 @@ if ($mysqli->errno) {
 if (is_bool($result)) {
     echo $result ? 'Query completed successfully!' : 'Query failed!';
 } else {
-    var_dump($result); // mysql_result object
-
     $data = [];
     while ($row = $result->fetch_assoc()) {
         $data[] = $row;
