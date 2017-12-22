@@ -19,10 +19,17 @@ try {
     $productCategoryId = 3;
     $stmt->execute();
 
-    $productName = 'Rocket Launcher';
-    $productPrice = 2099.99;
-    $productCategoryId = 2;
-    $stmt->execute();
+    $stmt->execute([
+        ':name' => 'Rocket Launcher',
+        ':price' => 2099.99,
+        ':category' => 2
+    ]);
+
+    $stmt->execute([
+        'name' => 'Teddy Bear',
+        'price' => 19.50,
+        'category' => 1
+    ]);
 
     // using positional placeholders
     $sql = "INSERT INTO `products` (`name`, `price`, `category_id`) VALUES (?, ?, ?);";
