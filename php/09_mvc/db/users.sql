@@ -8,5 +8,5 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `login` (`login`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `my_db2`.`users` (`login`, `password`, `name`, `about`)
+INSERT INTO `users` (`login`, `password`, `name`, `about`)
 VALUES ('admin', '21232f297a57a5a743894a0e4a801fc3', 'Admin', 'I am admin of this website.');
