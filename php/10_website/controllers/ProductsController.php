@@ -1,9 +1,9 @@
 <?php
 
-namespace mvc\controllers;
+namespace website\controllers;
 
-use mvc\core\Controller;
-use mvc\models\Product;
+use website\core\Controller;
+use website\models\Product;
 
 class ProductsController extends Controller
 {
@@ -15,7 +15,8 @@ class ProductsController extends Controller
 
     public function index()
     {
-        $this->data['products'] = $this->model->getList();
+        $category = empty($this->params['category']) ? 0 : (int) $this->params['category'];
+        $this->data['products'] = $this->model->getListByCategory($category);
     }
 
     public function product()

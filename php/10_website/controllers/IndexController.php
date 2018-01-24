@@ -1,9 +1,9 @@
 <?php
 
-namespace mvc\controllers;
+namespace website\controllers;
 
-use core\Config;
-use core\Controller;
+use website\core\Config;
+use website\core\Controller;
 
 class IndexController extends Controller
 {

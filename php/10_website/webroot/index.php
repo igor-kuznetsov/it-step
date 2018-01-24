@@ -1,6 +1,6 @@
 <?php
 
-use mvc\core\App as App;
+use core\App as App;
 
 define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(dirname(__FILE__)));

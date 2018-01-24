@@ -1,18 +1,20 @@
 <?php
 
-namespace mvc\core;
+namespace website\core;
 
 use Exception;
 
 class App
 {
-    const CONTROLLERS_NS = 'mvc\\controllers\\';
+    const CONTROLLERS_NS = 'website\\controllers\\';
 
     private static $router;
     private static $dbConnection;
 
     public static function run($uri)
     {
+        session_start();
+
         Config::load();
 
         self::$router = new Router($uri);

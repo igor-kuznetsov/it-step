@@ -1,6 +1,6 @@
 <?php
 
-namespace mvc\core;
+namespace website\core;
 
 use Exception;
 use mysqli;

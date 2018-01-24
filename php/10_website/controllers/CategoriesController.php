@@ -1,9 +1,9 @@
 <?php
 
-namespace controllers;
+namespace website\controllers;
 
-use core\Controller;
-use models\Category;
+use website\core\Controller;
+use website\models\Category;
 
 class CategoriesController extends Controller
 {

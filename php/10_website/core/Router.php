@@ -1,6 +1,6 @@
 <?php
 
-namespace mvc\core;
+namespace website\core;
 
 class Router
 {
@@ -57,5 +57,11 @@ class Router
     public function getParams()
     {
         return $this->params;
+    }
+
+    public static function redirect($location)
+    {
+        header('Location: '.$location);
+        exit;
     }
 }
