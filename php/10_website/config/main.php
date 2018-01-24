@@ -1,6 +1,6 @@
 <?php
 
-use core\Config;
+use website\core\Config;
 
 Config::set('site_name', 'My Website');
 Config::set('layout', 'main');

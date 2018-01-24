@@ -1,8 +1,8 @@
 <?php
 
-use core\App;
-use core\Config;
-use core\Session;
+use website\core\App;
+use website\core\Config;
+use website\core\Session;
 
 ?><!DOCTYPE html>
 <html lang="en">

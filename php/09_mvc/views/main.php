@@ -1,7 +1,7 @@
 <?php
 
-use core\App;
-use core\Config;
+use mvc\core\App;
+use mvc\core\Config;
 
 ?><!DOCTYPE html>
 <html lang="en">

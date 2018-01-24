@@ -6,7 +6,10 @@ define('DS', DIRECTORY_SEPARATOR);
 define('ROOT', dirname(dirname(__FILE__)));
 
 spl_autoload_register(function ($className) {
-    $classPath = ROOT . DS . str_replace('\\', DS, ltrim($className, '\\')) . '.php';
+    $className = ltrim($className, '\\');
+    $className = str_replace('mvc\\', '', $className);
+    $className = str_replace('\\', DS, $className);
+    $classPath = ROOT . DS . $className . '.php';
 
     if (file_exists($classPath)) {
         require_once $classPath;

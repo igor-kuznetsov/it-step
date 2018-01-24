@@ -2,8 +2,8 @@
 
 namespace mvc\controllers;
 
-use core\Config;
-use core\Controller;
+use mvc\core\Config;
+use mvc\core\Controller;
 
 class IndexController extends Controller
 {

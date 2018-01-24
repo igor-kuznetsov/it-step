@@ -1,6 +1,6 @@
 <?php
 
-use core\Config;
+use website\core\Config;
 
 Config::set('db_host', 'localhost');
 Config::set('db_name', 'mywebsite');
