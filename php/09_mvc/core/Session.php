@@ -1,6 +1,6 @@
 <?php
 
-namespace website\core;
+namespace mvc\core;
 
 class Session
 {

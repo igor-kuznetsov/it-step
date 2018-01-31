@@ -1,12 +1,12 @@
 <?php
 
-namespace website\controllers;
+namespace mvc\controllers;
 
-use website\core\Config;
-use website\core\Controller;
-use website\core\Router;
-use website\core\Session;
-use website\models\User;
+use mvc\core\Config;
+use mvc\core\Controller;
+use mvc\core\Router;
+use mvc\core\Session;
+use mvc\models\User;
 
 class UserController extends Controller
 {

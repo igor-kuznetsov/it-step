@@ -13,6 +13,8 @@ class App
 
     public static function run($uri)
     {
+        session_start();
+
         Config::load();
 
         self::$router = new Router($uri);

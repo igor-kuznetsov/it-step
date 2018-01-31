@@ -58,4 +58,10 @@ class Router
     {
         return $this->params;
     }
+
+    public static function redirect($location)
+    {
+        header('Location: '.$location);
+        exit;
+    }
 }
